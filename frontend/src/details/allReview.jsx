@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewsCard from './ReviewsCard';
+import ReviewsCard from './reviewsCard';
 import { Typography } from '@mui/material';
 import axios from 'axios';
 
