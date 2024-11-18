@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.filter{
+  @apply text-center opacity-70 hover:opacity-100  text-xs;
+}
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.reviews{
+
+  padding: 10px;
+ 
+  justify-content: center;
+}
