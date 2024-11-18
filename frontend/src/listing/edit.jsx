@@ -67,7 +67,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/listings/${id}`,
+        `https://wonderlust-backend.onrender.com/api/listings/${id}`,
         newFormData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },
@@ -103,7 +103,7 @@ const Edit = () => {
       alignItems="center"
       sx={{
        
-        
+
         backgroundColor: '#f9f9f9',
         padding: 2,
       }}

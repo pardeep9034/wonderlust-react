@@ -30,7 +30,7 @@ const Signin = () => {
         }
 
         try {
-            const { data } = await axios.post('http://localhost:8080/api/auth/signin', formData, {
+            const { data } = await axios.post('https://wonderlust-backend.onrender.com/api/auth/signin', formData, {
                 headers: { 'Content-Type': 'application/json' },
                 withCredentials: true,
             });

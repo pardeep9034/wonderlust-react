@@ -28,7 +28,7 @@ const Review = ({ listingId }) => {
       return;
     }
     try {
-      const response = await axios.post(`http://localhost:8080/api/review/${listingId}`, formData,{
+      const response = await axios.post(`https://wonderlust-backend.onrender.com/api/review/${listingId}`, formData,{
         headers: {
           'Content-Type': 'application/json',
 

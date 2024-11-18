@@ -9,7 +9,7 @@ const AllReview = ({listingId}) => {
   React.useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/reviews/${listingId}`);
+        const response = await axios.get(`https://wonderlust-backend.onrender.com/api/reviews/${listingId}`);
         setReviews(response.data.reviews);
         
       } catch (error) {

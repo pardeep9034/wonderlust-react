@@ -41,7 +41,7 @@ const AddListing = () => {
         newFormData.append('image', image);
 
         try {
-            const response = await axios.post('http://localhost:8080/api/newlisting', newFormData, {
+            const response = await axios.post('https://wonderlust-backend.onrender.com/api/newlisting', newFormData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

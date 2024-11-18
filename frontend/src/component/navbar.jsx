@@ -49,7 +49,7 @@ function ResponsiveAppBar() {
 
   const handleLogout = async () => {
     try {
-        await axios.get('http://localhost:8080/api/auth/logout', {
+        await axios.get('https://wonderlust-backend.onrender.com/api/auth/logout', {
             withCredentials: true,
         });
         setUser(null);

@@ -14,14 +14,14 @@ const {cloudinary,storage}=require('./cloudnary_config');
 const upload=multer({storage});
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow only your frontend origin
+    origin: ['http://localhost:5173','https://wonderlust-react.vercel.app/'], // Allow only your frontend origin
     credentials: true, // Allow credentials such as cookies
 }));
 app.use(express.json());
 app.use(cookieParser());
 //connect to mongodb
 const main=async()=>{
-   const mongo=await mongoose.connect(process.env.MONGO_URl);
+   const mongo=await mongoose.connect(process.env.MONGO_URL);
     console.log('Connected to MongoDB');
 }
 main();

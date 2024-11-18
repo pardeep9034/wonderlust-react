@@ -14,7 +14,7 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/auth/user', { withCredentials: true });
+                const response = await axios.get('https://wonderlust-backend.onrender.com/api/auth/user', { withCredentials: true });
                 setUser(response.data.user);
             } catch (err) {
                 console.error("Error fetching user:", err);
@@ -27,7 +27,7 @@ export const UserProvider = ({ children }) => {
 
         const fetchListings = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/listings", {
+                const response = await axios.get("https://wonderlust-backend.onrender.com/api/listings", {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true,
                 });

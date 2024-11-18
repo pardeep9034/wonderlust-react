@@ -42,7 +42,7 @@ const Details = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/api/listings/${id}`, { withCredentials: true });
+      await axios.delete(`https://wonderlust-backend.onrender.com/api/listings/${id}`, { withCredentials: true });
       navigate("/"); // Redirect to main page
     } catch (error) {
       console.error('Error deleting listing:', error);
