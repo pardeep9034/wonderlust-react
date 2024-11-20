@@ -29,7 +29,7 @@ const Details = () => {
 
     const fetchUser = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/auth/user', { withCredentials: true });
+        const response = await axios.get('https://wonderlust-backend.onrender.com/api/auth/user', { withCredentials: true });
         setUser(response.data.user);
       } catch (error) {
         console.error('Error fetching user:', error);
