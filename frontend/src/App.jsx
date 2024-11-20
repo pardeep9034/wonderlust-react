@@ -6,6 +6,7 @@ import Signup from './user/signup';
 import Details from './details/details';
 import AddListing from './listing/addListing';
 import Edit from './listing/edit';
+import Profile from './user/profile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
             <Route path="/details/:id" element={<Details />} />
             <Route path="/addlisting" element={<AddListing />} />
             <Route path="/edit/:id" element={<Edit />} />
+            <Route path="/profile" element={<Profile />} />
+            
           </Routes>
         </main>
         

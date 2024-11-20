@@ -19,6 +19,7 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieParser());
+app.use('/public',express.static('public'));
 //connect to mongodb
 const main=async()=>{
    const mongo=await mongoose.connect(process.env.MONGO_URL);
@@ -210,6 +211,24 @@ app.get('/api/reviews/:id',async(req,res)=>{
     }
     
 });
+//change password
+app.put('/api/auth/password',verifyUser,async(req,res)=>{
+   
+    try{
+        const {oldPassword,newPassword}=req.body;
+        const user=await User.findById(req.user.id  );
+        if(oldPassword!==user.password){
+            return res.json({success:false,message:'Old password is incorrect'});
+        }
+        user.password=newPassword;
+        await user.save();
+        res.json({success:true,message:'Password changed successfully'});
+    }
+    catch(err){
+        res.json({success:false,error:err.message});
+    }
+}
+)
 
 
 

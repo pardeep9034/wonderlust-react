@@ -17,7 +17,7 @@ const Details = () => {
   useEffect(() => {
     const fetchCardDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/listings/${id}`);
+        const response = await axios.get(`https://wonderlust-backend.onrender.com/api/listings/${id}`);
         setCardDetails(response.data.listing);
         setListingOwner(response.data.listing.owner._id);
       } catch (error) {
